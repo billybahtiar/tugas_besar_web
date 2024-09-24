@@ -13,6 +13,41 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
     @yield('styles')
+
+    <style>
+        body {
+            background-color: #f4f6f9; /* Warna latar belakang yang lebih cerah */
+        }
+        .main-header {
+            background-color: #343a40; /* Warna navbar yang gelap */
+        }
+        .main-header .navbar-nav .nav-link {
+            color: #ffffff; /* Warna teks pada navbar */
+        }
+        .main-header .navbar-nav .nav-link:hover {
+            background-color: #495057; /* Efek hover pada navbar */
+        }
+        .sidebar-dark-primary {
+            background-color: #343a40; /* Warna sidebar yang gelap */
+        }
+        .brand-link {
+            background-color: #007bff; /* Warna latar belakang logo */
+        }
+        .brand-link .brand-text {
+            color: #ffffff; /* Warna teks pada brand link */
+        }
+        .content-header {
+            background-color: #ffffff; /* Warna header konten */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bayangan untuk header konten */
+            margin-bottom: 20px; /* Jarak bawah */
+        }
+        .main-footer {
+            background-color: #343a40; /* Warna footer yang gelap */
+            color: #ffffff; /* Warna teks footer */
+        }
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -56,7 +91,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="/" class="brand-link">
-            <img src="{{ asset('images/AdminLTELogo.png') }}" alt="AdminLTE Logo"
+            <img src="{{ asset('images/cover.jpeg') }}" alt="AdminLTE Logo"
                  class="brand-image img-circle elevation-3"
                  style="opacity: .8">
             <span class="brand-text font-weight-light">Admin </span>
@@ -67,21 +102,21 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-    @if(count($errors) > 0 )
-        <div class="content-header mb-0 pb-0">
-            <div class="container-fluid">
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <ul class="p-0 m-0" style="list-style: none;">
-                        @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
+        @if(count($errors) > 0 )
+            <div class="content-header mb-0 pb-0">
+                <div class="container-fluid">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <ul class="p-0 m-0" style="list-style: none;">
+                            @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
         @endif
         @if(session()->has('message'))
             <div class="content-header mb-0 pb-0">
@@ -91,7 +126,7 @@
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    </div> 
+                    </div>
                 </div><!-- /.container-fluid -->
             </div>
         @endif
@@ -113,10 +148,10 @@
     <footer class="main-footer">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
-            WEB E
+            CIHUYY
         </div>
         <!-- Default to the left -->
-        <strong>Terima kasih telah mengunjungi situs kami.</a>.</strong>
+        <strong>Terima kasih telah mengunjungi situs kami.</strong>
     </footer>
 </div>
 <!-- ./wrapper -->

@@ -18,13 +18,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="card bg-light">
+                    <div class="card border-0 shadow-lg rounded" style="background-color: #f9f9f9;">
                         <div class="card-body">
                             <h5 class="card-title text-primary">{{ __('Halo, Selamat Datang!') }}</h5>
-                            <p class="card-text">
+                            <p class="card-text" style="color: #333;">
                                 Selamat datang di halaman dashboard. Ini adalah tempat untuk mengelola semua informasi Anda.
                             </p>
-                            <img src="{{ asset('images/Foto.jpeg') }}" alt="Image" class="img-fluid rounded">
+                            <img src="{{ asset('images/hero.jpg') }}" alt="Image" class="img-fluid rounded mb-4" style="border-radius: 10px;">
                         </div>
                     </div>
                 </div>
