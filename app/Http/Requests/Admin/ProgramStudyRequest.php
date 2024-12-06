@@ -21,10 +21,29 @@ class ProgramStudyRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            'kode_prody' => 'required',
-            'nama_prody' => 'required',
-            'jurusan_id' => 'required'
-        ];
+        $rules = [];
+
+        
+        if ($this->input('kode_prody')) {
+            $rules['kode_prody'] = 'required|string|max:10'; 
+        } else {
+            $rules['kode_prody'] = 'required';
+        }
+
+        
+        if ($this->input('nama_prody')) {
+            $rules['nama_prody'] = 'required|string|max:15'; r
+        } else {
+            $rules['nama_prody'] = 'required';
+        }
+
+        // Memvalidasi jurusan_id
+        if ($this->input('jurusan_id')) {
+            $rules['jurusan_id'] = 'required|integer'; 
+        } else {
+            $rules['jurusan_id'] = 'required';
+        }
+
+        return $rules;
     }
 }
